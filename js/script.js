@@ -1,3 +1,4 @@
+"use strict"
 // Husk fra dag 1: skriv "use strict" herunder
 
 
@@ -12,11 +13,13 @@ const getImage = document.getElementById("imagePlaceholder");
 changeImgBtn.addEventListener("click", function() {
 
     // Husk fra dag 1: skriv if/else-strukturen selv herunder.
-    //
+    
     // "this" er den knap, der blev klikket på.
     // this.textContent er teksten, der står på knappen lige nu.
     // getImage.src er billedets kilde (hvilket billede der vises).
     //
+
+    
     // Hvis this.textContent er "Before", så:
     //   - sæt getImage.src til "img/before.png"
     //   - sæt this.textContent til "After"
@@ -24,4 +27,12 @@ changeImgBtn.addEventListener("click", function() {
     //   - sæt getImage.src til "img/after.png"
     //   - sæt this.textContent til "Before"
 
+if(this.textContent === `Before`) {
+        getImage.src = `img/before.png`;
+        this.textContent = `After`
+
+    }  else{
+        getImage.src = `img/after.png`;
+        this.textContent = `Before`
+    }
 });
